@@ -10,3 +10,5 @@ C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.pdb
 C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.csprojAssemblyReference.cache
 C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Release\ToyBox.exe.config
 C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.CMD_Tools_slmgr_EnterKey.resources
+C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.TrustInfo.xml
+C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.exe.manifest
