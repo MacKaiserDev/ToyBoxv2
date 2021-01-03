@@ -1,0 +1,54 @@
+﻿RSTRUI.EXE
+Systemdateien- und Einstellungen wiederherstellen
+
+WUAPP.EXE
+Windows Updates verwalten
+
+SYSTEMPROPERTIEADVANCED.EXE
+Systemeigenschaften Register Erweitert
+
+SYSTEMPROPERTIECOMPUTERNAME.EXE
+Systemeigentschaften Register Computername
+
+DESK.CPL
+Verwaltung der Anzeigeneigenschaften
+
+NCPA.CPL
+Verwaltung der Netzwerkeinstellungen
+
+WSCUI.CPL
+Aufruf des Wartungscenters
+
+PERFMON /REL
+Aufruf der Zuverlässigkeitsüberwachung
+
+atum und Uhrzeit	timedate.cpl
+Gamecontroller	joy.cpl
+Regions- und Sprachoptionen	intl.cpl
+Sound´s und Audiogeräte	mmsys.cpl
+Sprach- ein und -ausgabe	sapi.cpl
+Telefon- und Modemoptionen	telephon.cpl
+Mauseigenschaften	main.cpl
+
+Internet Optionen	inetcpl.cpl
+Software / Programme & Funktionen	appwiz.cpl
+Anzeige Bildschirmauflösung	desk.cpl
+Energieoptionen	powercfg.cpl
+Gerätemanager (Windows 7)	hdwwiz.cpl
+Hardware-Assistent (Windows XP)	hdwwiz.cpl
+Mauseigenschaften	main.cpl
+
+System/Systemeinstellungen	sysdm.cpl
+Firewall	wf.msc
+Dienste	services.msc
+Systemsteuerung	control
+Taskmanager	taskmgr
+Remotedesktop	mstsc
+Aufgabenplanung	taskschd.msc
+MS-Dos Eingabeaufforderung	cmd
+Datenträgerbereinigung	cleanmgr
+Defragmentierung	dfrgui
+Snipping-Tool	snippingtool
+Write	wordpad
+Notepad	notepad
+Taschenrechner	calc

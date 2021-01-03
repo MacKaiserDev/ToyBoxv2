@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyBox", "ToyBox\ToyBox.csproj", "{7CE7F920-9B87-401B-B5DC-92BC30F49127}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototypen", "Prototypen", "{289C64EC-FD5E-4624-B238-0EEED01D527E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceProvider", "ServiceProvider\ServiceProvider.csproj", "{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CE7F920-9B87-401B-B5DC-92BC30F49127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE7F920-9B87-401B-B5DC-92BC30F49127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE7F920-9B87-401B-B5DC-92BC30F49127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE7F920-9B87-401B-B5DC-92BC30F49127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B} = {289C64EC-FD5E-4624-B238-0EEED01D527E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C12EA6C2-5523-4B2C-8BBD-D0366D45214E}
+	EndGlobalSection
+EndGlobal
