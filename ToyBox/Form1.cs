@@ -37,13 +37,7 @@ namespace ToyBox
         {
             try
             {
-                Process P = new Process();
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.UseShellExecute = true;
-                P.StartInfo.Arguments = "/k" + "ipconfig /all";
-                //P.StartInfo.Verb = "runas /trustlevel:Administrator";
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", "ipconfig /all", true);
             }
             catch
             {
@@ -57,12 +51,7 @@ namespace ToyBox
         {
             try
             {
-                Process P = new Process();
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.Arguments = "/k" + "ipconfig /flushdns";
-                P.StartInfo.Verb = "runas";
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", "ipconfig /flushdns", true);
             }
             catch
             {
@@ -77,12 +66,8 @@ namespace ToyBox
         {
             try
             {
-                Process P = new Process();
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.Arguments = "/k" + "change logon /enable";
-                P.StartInfo.Verb = "runas";
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", "change logon /enable", true);
+               
             }
             catch
             {
@@ -96,12 +81,8 @@ namespace ToyBox
         {
             try
             {
-                Process P = new Process();
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.Arguments = "/k" + "change logon /disable";
-                P.StartInfo.Verb = "runas";
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", "change logon /disable", true);
+               
             }
             catch
             {
@@ -115,12 +96,8 @@ namespace ToyBox
         {
             try
             {
-                Process P = new Process();
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.Arguments = "/k" + "change user /Install";
-                P.StartInfo.Verb = "runas";
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", "change user /Install", true);
+    
             }
             catch
             {
@@ -134,12 +111,8 @@ namespace ToyBox
         {
             try
             {
-                Process P = new Process();
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.Arguments = "/k" + "change user /execute";
-                P.StartInfo.Verb = "runas";
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", "change user /execute", true);
+                
             }
             catch
             {
@@ -153,12 +126,8 @@ namespace ToyBox
         {
             try
             {
-                Process P = new Process();
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.Arguments = "/k" + "change user /query";
-                P.StartInfo.Verb = "runas";
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", "change user /query", true);
+            
             }
             catch
             {
