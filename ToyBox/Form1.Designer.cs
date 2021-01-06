@@ -42,6 +42,7 @@
             this.flushDNSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iPConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsAktivierungSlmgrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fixEnviromentalVariablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.computerverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diensteSteuerungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,8 +60,10 @@
             this.chromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fixEnviromentalVariablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.iISRESETToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.whoamiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gpupdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,10 +85,13 @@
             this.cMDToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changeLogonToolStripMenuItem,
             this.changeUserToolStripMenuItem,
+            this.gpupdateToolStripMenuItem,
             this.flushDNSToolStripMenuItem,
+            this.iISRESETToolStripMenuItem,
             this.iPConfigToolStripMenuItem,
+            this.fixEnviromentalVariablesToolStripMenuItem,
             this.windowsAktivierungSlmgrToolStripMenuItem,
-            this.fixEnviromentalVariablesToolStripMenuItem});
+            this.whoamiToolStripMenuItem});
             this.cMDToolsToolStripMenuItem.Name = "cMDToolsToolStripMenuItem";
             this.cMDToolsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.cMDToolsToolStripMenuItem.Text = "CMD-Tools";
@@ -165,6 +171,13 @@
             this.windowsAktivierungSlmgrToolStripMenuItem.Text = "Windows-Aktivierung slmgr";
             this.windowsAktivierungSlmgrToolStripMenuItem.Click += new System.EventHandler(this.windowsAktivierungSlmgrToolStripMenuItem_Click);
             // 
+            // fixEnviromentalVariablesToolStripMenuItem
+            // 
+            this.fixEnviromentalVariablesToolStripMenuItem.Name = "fixEnviromentalVariablesToolStripMenuItem";
+            this.fixEnviromentalVariablesToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.fixEnviromentalVariablesToolStripMenuItem.Text = "Lokale Path Variable erneutern";
+            this.fixEnviromentalVariablesToolStripMenuItem.Click += new System.EventHandler(this.fixEnviromentalVariablesToolStripMenuItem_Click);
+            // 
             // systemToolsToolStripMenuItem
             // 
             this.systemToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -208,28 +221,28 @@
             // enableToolStripMenuItem2
             // 
             this.enableToolStripMenuItem2.Name = "enableToolStripMenuItem2";
-            this.enableToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.enableToolStripMenuItem2.Size = new System.Drawing.Size(112, 22);
             this.enableToolStripMenuItem2.Text = "Enable";
             this.enableToolStripMenuItem2.Click += new System.EventHandler(this.enableToolStripMenuItem2_Click);
             // 
             // disableToolStripMenuItem2
             // 
             this.disableToolStripMenuItem2.Name = "disableToolStripMenuItem2";
-            this.disableToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.disableToolStripMenuItem2.Size = new System.Drawing.Size(112, 22);
             this.disableToolStripMenuItem2.Text = "Disable";
             this.disableToolStripMenuItem2.Click += new System.EventHandler(this.disableToolStripMenuItem2_Click);
             // 
             // startToolStripMenuItem
             // 
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.startToolStripMenuItem.Text = "Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
             // stopToolStripMenuItem
             // 
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.stopToolStripMenuItem.Text = "Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
@@ -296,21 +309,35 @@
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
             this.infoToolStripMenuItem.Text = "Info";
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
-            // 
-            // fixEnviromentalVariablesToolStripMenuItem
-            // 
-            this.fixEnviromentalVariablesToolStripMenuItem.Name = "fixEnviromentalVariablesToolStripMenuItem";
-            this.fixEnviromentalVariablesToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.fixEnviromentalVariablesToolStripMenuItem.Text = "Lokale Path Variable erneutern";
-            this.fixEnviromentalVariablesToolStripMenuItem.Click += new System.EventHandler(this.fixEnviromentalVariablesToolStripMenuItem_Click);
             // 
             // notifyIcon1
             // 
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
+            // 
+            // iISRESETToolStripMenuItem
+            // 
+            this.iISRESETToolStripMenuItem.Name = "iISRESETToolStripMenuItem";
+            this.iISRESETToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.iISRESETToolStripMenuItem.Text = "IISRESET";
+            this.iISRESETToolStripMenuItem.Click += new System.EventHandler(this.iISRESETToolStripMenuItem_Click);
+            // 
+            // whoamiToolStripMenuItem
+            // 
+            this.whoamiToolStripMenuItem.Name = "whoamiToolStripMenuItem";
+            this.whoamiToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.whoamiToolStripMenuItem.Text = "whoami";
+            this.whoamiToolStripMenuItem.Click += new System.EventHandler(this.whoamiToolStripMenuItem_Click);
+            // 
+            // gpupdateToolStripMenuItem
+            // 
+            this.gpupdateToolStripMenuItem.Name = "gpupdateToolStripMenuItem";
+            this.gpupdateToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.gpupdateToolStripMenuItem.Text = "gpupdate";
+            this.gpupdateToolStripMenuItem.Click += new System.EventHandler(this.gpupdateToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -364,6 +391,9 @@
         private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fixEnviromentalVariablesToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolStripMenuItem iISRESETToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem whoamiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gpupdateToolStripMenuItem;
     }
 }
 

@@ -32,34 +32,8 @@ namespace ToyBox
         --------------------------------------------------------------------------
         */ 
 
-        #region CMD-Tools > IPConfig //runas
-        private void iPConfigToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                CProcessStart.PStart("cmd.exe", "/k", "ipconfig /all", true);
-            }
-            catch
-            {
-                MessageBox.Show("Fehler");
-            }
-        }
-        #endregion
 
-        #region CMD-Tools > Flushdns //runas
-        private void flushDNSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                CProcessStart.PStart("cmd.exe", "/k", "ipconfig /flushdns", true);
-            }
-            catch
-            {
-                MessageBox.Show("Fehler");
-            }
-         
-        }
-        #endregion
+        
 
         #region CMD-Tools > Change logon > Enable //runas
         private void enableToolStripMenuItem_Click(object sender, EventArgs e)
@@ -136,6 +110,70 @@ namespace ToyBox
         }
         #endregion
 
+        #region CMD-Tools > GPUPDATE //runas
+        private void gpupdateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CProcessStart.PStart("cmd.exe", "/k", "gpupdate /force", true);
+        }
+        #endregion
+
+        #region CMD-Tools > Flushdns //runas
+        private void flushDNSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CProcessStart.PStart("cmd.exe", "/k", "ipconfig /flushdns", true);
+            }
+            catch
+            {
+                MessageBox.Show("Fehler");
+            }
+
+        }
+        #endregion
+
+        #region CMD-Tools > IISRESET //runas
+        private void iISRESETToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CProcessStart.PStart("cmd.exe", "/k", "iisreset", true);
+        }
+
+
+        #endregion
+
+        #region CMD-Tools > IPConfig //runas
+        private void iPConfigToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CProcessStart.PStart("cmd.exe", "/k", "ipconfig /all", true);
+            }
+            catch
+            {
+                MessageBox.Show("Fehler");
+            }
+        }
+        #endregion
+
+        #region CMD-Tools > Lokale Path Variable erneuern //runas
+        private void fixEnviromentalVariablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sKey = @"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment";
+                string sPath = @"C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;";
+                //Setzt den Default Path neu
+                Registry.SetValue(sKey, "Path", sPath);
+                MessageBox.Show("Lokale Path Variable mit dem Wert\r\n" + sPath + "\r\nunter " + sKey + " wurde gesetzt\r\nDamit die Änderung wirksam wird, muss der Rechner neu gestartet werden. ");
+            }
+            catch
+            {
+                MessageBox.Show("Fehler beim Setzten der lokalen Path Variable Ursache ungekannt.");
+            }
+
+        }
+        #endregion
+
         #region CMD-Tools > Windows-Aktivierung slmgr //runas
         private void windowsAktivierungSlmgrToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -145,23 +183,13 @@ namespace ToyBox
         }
         #endregion
 
-        #region CMD-Tools > Fix Enviromental Variables //runas
-        private void fixEnviromentalVariablesToolStripMenuItem_Click(object sender, EventArgs e)
+        #region CMD-Tools > WHOAMI //runas
+        private void whoamiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string sKey = @"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment";
-                string sPath = @"C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;";
-                //Setzt den Default Path neu
-                Registry.SetValue(sKey, "Path", sPath);
-                MessageBox.Show("Lokale Path Variable mit dem Wert" + sPath + " unter " + sKey + " wurde gesetzt");
-            }
-            catch
-            {
-                MessageBox.Show("Fehler beim Setzten der lokalen Path Variable Ursache ungekannt.");
-            }
-            
+            CProcessStart.PStart("cmd.exe", "/k", "whoami", true);
         }
+
+
         #endregion
 
         /*
@@ -180,11 +208,7 @@ namespace ToyBox
         #region System-Tools > Systemsteuerung
         private void systemsteuerunglegacyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process P = new Process();
-            P.StartInfo.FileName = "control.exe";
-            P.StartInfo.CreateNoWindow = false;
-            
-            P.Start();
+            CProcessStart.PStart("control.exe");
         }
         #endregion
 
@@ -304,7 +328,6 @@ namespace ToyBox
             MessageBox.Show("Chrome wird heruntergeladen. Die Datei wurde unter " + Zielpfad + " abgelegt. ");
         }
         #endregion
-
         /*
        --------------------------------------------------------------------------
        Menüpunkt Hilfe
@@ -325,6 +348,9 @@ namespace ToyBox
 
 
         #endregion
+
+
+        
 
     }
 }

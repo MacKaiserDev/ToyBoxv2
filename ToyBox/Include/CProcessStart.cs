@@ -22,5 +22,14 @@ namespace ToyBox
             //P.StartInfo.Verb = "runas /trustlevel:Administrator";
             P.Start();
         }
+
+        //Aufruf von PStart für die Systemtools, welche keine Argimente brauchen. 
+        public static void PStart(string sAnwendung)
+        {
+            Process P = new Process();
+            P.StartInfo.FileName=sAnwendung;
+            P.StartInfo.CreateNoWindow = false;
+            P.Start();
+        }
     }
 }
