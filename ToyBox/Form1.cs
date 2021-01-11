@@ -303,6 +303,41 @@ namespace ToyBox
         }
         #endregion
 
+        #region Software-Tools > Advanced IP Scanner
+        private void advancedIPScannerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Liest den Downloads Ordner des aktuellen Users aus und speichert den Download von Teamviewer an dieser Stelle. 
+            string path = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+
+            string Zieldatei_Advanced_IP_Scanner = "Advanced_IP_Scanner.exe";
+            string Zielpfad = path + @"\" + Zieldatei_Advanced_IP_Scanner;
+
+            WebClient wb = new WebClient();
+            wb.DownloadFileAsync(new System.Uri("http://itskk.de/Upload/Advanced_IP_Scanner.exe"), Zielpfad);
+            //Process.Start(path);
+
+            MessageBox.Show("Advanced IP Scanner wird heruntergeladen. Die Datei wurde unter: " + Zielpfad + " abgelegt. ");
+        }
+        #endregion
+
+        #region Software-Download > Chrome
+        private void chromeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Liest den Downloads Ordner des aktuellen Users aus und speichert den Download von Firefox an dieser Stelle. 
+            string path = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+
+            string Zieldatei_Chrome = "Google_Chrome.exe";
+            string Zielpfad = path + @"\" + Zieldatei_Chrome;
+
+
+            WebClient wb = new WebClient();
+            wb.DownloadFileAsync(new System.Uri("http://itskk.de/Upload/ChromeSetup.exe"), Zielpfad);
+
+            //Process.Start(path);
+            MessageBox.Show("Chrome wird heruntergeladen. Die Datei wurde unter: " + Zielpfad + " abgelegt. ");
+        }
+        #endregion
+
         #region Software-Download > Firefox
         private void firefoxToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -316,25 +351,41 @@ namespace ToyBox
             wb.DownloadFileAsync(new System.Uri("https://ftp.mozilla.org/pub/firefox/releases/84.0/win64/de/Firefox%20Setup%2084.0.exe"), Zielpfad);
             //Process.Start(path);
 
-            MessageBox.Show("Firefox wird heruntergeladen. Die Datei wurde unter "+ Zielpfad + " abgelegt. ");
+            MessageBox.Show("Firefox wird heruntergeladen. Die Datei wurde unter: "+ Zielpfad + " abgelegt. ");
         }
         #endregion
 
-        #region Software-Download > Chrome
-        private void chromeToolStripMenuItem_Click(object sender, EventArgs e)
+        #region Software-Tools > Teamviewer QS
+        private void teamviewerQSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Liest den Downloads Ordner des aktuellen Users aus und speichert den Download von Firefox an dieser Stelle. 
+            //Liest den Downloads Ordner des aktuellen Users aus und speichert den Download von Teamviewer an dieser Stelle. 
             string path = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
 
-            string Zieldatei_Chrome = "Google_Chrome.exe";
-            string Zielpfad = path + @"\" + Zieldatei_Chrome;
-            
+            string Zieldatei_TeamviewerQS = "Teamviewer_QS.exe";
+            string Zielpfad = path + @"\" + Zieldatei_TeamviewerQS;
 
             WebClient wb = new WebClient();
-            wb.DownloadFileAsync(new System.Uri("http://itskk.de/Upload/ChromeSetup.exe"), Zielpfad);
-            
+            wb.DownloadFileAsync(new System.Uri("http://itskk.de/Upload/TeamViewerQS.exe"), Zielpfad);
             //Process.Start(path);
-            MessageBox.Show("Chrome wird heruntergeladen. Die Datei wurde unter " + Zielpfad + " abgelegt. ");
+
+            MessageBox.Show("Teamviewer QS wird heruntergeladen. Die Datei wurde unter: " + Zielpfad + " abgelegt. ");
+        }
+        #endregion
+
+        #region Software-Tools > Teamviewer Host
+        private void teamviewerHostToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Liest den Downloads Ordner des aktuellen Users aus und speichert den Download von Teamviewer an dieser Stelle. 
+            string path = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+
+            string Zieldatei_TeamviewerHost = "Teamviewer_Host.exe";
+            string Zielpfad = path + @"\" + Zieldatei_TeamviewerHost;
+
+            WebClient wb = new WebClient();
+            wb.DownloadFileAsync(new System.Uri("http://itskk.de/Upload/TeamViewer_Host_Setup.exe"), Zielpfad);
+            //Process.Start(path);
+
+            MessageBox.Show("Teamviewer Host wird heruntergeladen. Die Datei wurde unter: " + Zielpfad + " abgelegt. ");
         }
         #endregion
         /*
@@ -359,9 +410,12 @@ namespace ToyBox
 
 
 
+
+
+
         #endregion
 
-       
+ 
 
     }
 }
