@@ -155,6 +155,15 @@ namespace ToyBox
         }
         #endregion
 
+        #region CMD-Tools > Ping
+        private void pingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CMD_Tools_Ping CMDPING = new CMD_Tools_Ping();
+            CMDPING.Show();
+            CMDPING.Focus();
+        }
+        #endregion
+
         #region CMD-Tools > Lokale Path Variable erneuern //runas
         private void fixEnviromentalVariablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -347,10 +356,12 @@ namespace ToyBox
 
 
 
+
+
+
         #endregion
 
-
-        
+       
 
     }
 }

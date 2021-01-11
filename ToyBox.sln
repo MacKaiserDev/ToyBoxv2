@@ -9,6 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prototypen", "Prototypen", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceProvider", "ServiceProvider\ServiceProvider.csproj", "{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CMD-Tools", "CMD-Tools", "{D59ADD86-A107-4590-BAEF-E4AB76AFA0BB}"
+	ProjectSection(SolutionItems) = preProject
+		ToyBox\CMD_Tools_slmgr_EnterKey.cs = ToyBox\CMD_Tools_slmgr_EnterKey.cs
+		ToyBox\CMD_Tools_slmgr_EnterKey.Designer.cs = ToyBox\CMD_Tools_slmgr_EnterKey.Designer.cs
+		ToyBox\CMD_Tools_slmgr_EnterKey.resx = ToyBox\CMD_Tools_slmgr_EnterKey.resx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{B7B447BE-318C-4E41-9008-1C3CCEA6E9A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

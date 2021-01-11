@@ -28,19 +28,24 @@ namespace ToyBox
             }
             else
             {
-                Process P = new Process();
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.Verb = "runas";
-                P.StartInfo.Arguments = "/k" + "slmgr.vbs -ipk "+ sWindowsKey;
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", " slmgr.vbs -ipk "+ sWindowsKey, true);
+
+
+                //Process P = new Process();
+                //P.StartInfo.FileName = "cmd.exe";
+                //P.StartInfo.CreateNoWindow = false;
+                //P.StartInfo.Verb = "runas";
+                //P.StartInfo.Arguments = "/k" + "slmgr.vbs -ipk "+ sWindowsKey;
+                //P.Start();
                 System.Threading.Thread.Sleep(3000);
 
-                P.StartInfo.FileName = "cmd.exe";
-                P.StartInfo.CreateNoWindow = false;
-                P.StartInfo.Verb = "runas";
-                P.StartInfo.Arguments = "/k" + "slmgr.vbs -ato " + sWindowsKey;
-                P.Start();
+                CProcessStart.PStart("cmd.exe", "/k", "slmgr.vbs -at", true);
+
+                //P.StartInfo.FileName = "cmd.exe";
+                //P.StartInfo.CreateNoWindow = false;
+                //P.StartInfo.Verb = "runas";
+                //P.StartInfo.Arguments = "/k" + "slmgr.vbs -ato ";
+                //P.Start();
 
                 this.Close();
             }
