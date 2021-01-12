@@ -59,15 +59,16 @@
             this.datenträgerverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.netzwerkeinstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemsteuerunglegacyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mailKontenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softwareDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.firefoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.advancedIPScannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firefoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teamviewerQSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teamviewerHostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.teamviewerQSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teamviewerHostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.advancedIPScannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,14 +90,14 @@
             this.cMDToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changeLogonToolStripMenuItem,
             this.changeUserToolStripMenuItem,
-            this.gpupdateToolStripMenuItem,
             this.flushDNSToolStripMenuItem,
+            this.gpupdateToolStripMenuItem,
             this.iISRESETToolStripMenuItem,
             this.iPConfigToolStripMenuItem,
             this.fixEnviromentalVariablesToolStripMenuItem,
             this.pingToolStripMenuItem,
-            this.windowsAktivierungSlmgrToolStripMenuItem,
-            this.whoamiToolStripMenuItem});
+            this.whoamiToolStripMenuItem,
+            this.windowsAktivierungSlmgrToolStripMenuItem});
             this.cMDToolsToolStripMenuItem.Name = "cMDToolsToolStripMenuItem";
             this.cMDToolsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.cMDToolsToolStripMenuItem.Text = "CMD-Tools";
@@ -188,6 +189,7 @@
             this.fixEnviromentalVariablesToolStripMenuItem.Name = "fixEnviromentalVariablesToolStripMenuItem";
             this.fixEnviromentalVariablesToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.fixEnviromentalVariablesToolStripMenuItem.Text = "Lokale Path Variable erneutern";
+            this.fixEnviromentalVariablesToolStripMenuItem.ToolTipText = "Erneuters die lokale Default Path Variable";
             this.fixEnviromentalVariablesToolStripMenuItem.Click += new System.EventHandler(this.fixEnviromentalVariablesToolStripMenuItem_Click);
             // 
             // pingToolStripMenuItem
@@ -297,15 +299,26 @@
             // 
             this.netzwerkeinstellungenToolStripMenuItem.Name = "netzwerkeinstellungenToolStripMenuItem";
             this.netzwerkeinstellungenToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.netzwerkeinstellungenToolStripMenuItem.Text = "Netzwerkeinstellungen";
+            this.netzwerkeinstellungenToolStripMenuItem.Text = "Netzwerkadapter";
+            this.netzwerkeinstellungenToolStripMenuItem.ToolTipText = "Windows Netzwerkadapter";
             this.netzwerkeinstellungenToolStripMenuItem.Click += new System.EventHandler(this.netzwerkeinstellungenToolStripMenuItem_Click);
             // 
             // systemsteuerunglegacyToolStripMenuItem
             // 
+            this.systemsteuerunglegacyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mailKontenToolStripMenuItem});
             this.systemsteuerunglegacyToolStripMenuItem.Name = "systemsteuerunglegacyToolStripMenuItem";
             this.systemsteuerunglegacyToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.systemsteuerunglegacyToolStripMenuItem.Text = "Systemsteuerung(legacy)";
+            this.systemsteuerunglegacyToolStripMenuItem.ToolTipText = "Alte Windows Systemsteuerung. ";
             this.systemsteuerunglegacyToolStripMenuItem.Click += new System.EventHandler(this.systemsteuerunglegacyToolStripMenuItem_Click);
+            // 
+            // mailKontenToolStripMenuItem
+            // 
+            this.mailKontenToolStripMenuItem.Name = "mailKontenToolStripMenuItem";
+            this.mailKontenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mailKontenToolStripMenuItem.Text = "Mail-Konten";
+            this.mailKontenToolStripMenuItem.Click += new System.EventHandler(this.mailKontenToolStripMenuItem_Click);
             // 
             // softwareDownloadToolStripMenuItem
             // 
@@ -320,12 +333,12 @@
             this.softwareDownloadToolStripMenuItem.Text = "Software-Download";
             this.softwareDownloadToolStripMenuItem.Click += new System.EventHandler(this.softwareDownloadToolStripMenuItem_Click);
             // 
-            // firefoxToolStripMenuItem
+            // advancedIPScannerToolStripMenuItem
             // 
-            this.firefoxToolStripMenuItem.Name = "firefoxToolStripMenuItem";
-            this.firefoxToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.firefoxToolStripMenuItem.Text = "Firefox";
-            this.firefoxToolStripMenuItem.Click += new System.EventHandler(this.firefoxToolStripMenuItem_Click);
+            this.advancedIPScannerToolStripMenuItem.Name = "advancedIPScannerToolStripMenuItem";
+            this.advancedIPScannerToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.advancedIPScannerToolStripMenuItem.Text = "Advanced IP Scanner";
+            this.advancedIPScannerToolStripMenuItem.Click += new System.EventHandler(this.advancedIPScannerToolStripMenuItem_Click);
             // 
             // chromeToolStripMenuItem
             // 
@@ -333,6 +346,27 @@
             this.chromeToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.chromeToolStripMenuItem.Text = "Chrome";
             this.chromeToolStripMenuItem.Click += new System.EventHandler(this.chromeToolStripMenuItem_Click);
+            // 
+            // firefoxToolStripMenuItem
+            // 
+            this.firefoxToolStripMenuItem.Name = "firefoxToolStripMenuItem";
+            this.firefoxToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.firefoxToolStripMenuItem.Text = "Firefox";
+            this.firefoxToolStripMenuItem.Click += new System.EventHandler(this.firefoxToolStripMenuItem_Click);
+            // 
+            // teamviewerQSToolStripMenuItem
+            // 
+            this.teamviewerQSToolStripMenuItem.Name = "teamviewerQSToolStripMenuItem";
+            this.teamviewerQSToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.teamviewerQSToolStripMenuItem.Text = "Teamviewer QS";
+            this.teamviewerQSToolStripMenuItem.Click += new System.EventHandler(this.teamviewerQSToolStripMenuItem_Click);
+            // 
+            // teamviewerHostToolStripMenuItem
+            // 
+            this.teamviewerHostToolStripMenuItem.Name = "teamviewerHostToolStripMenuItem";
+            this.teamviewerHostToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.teamviewerHostToolStripMenuItem.Text = "Teamviewer Host";
+            this.teamviewerHostToolStripMenuItem.Click += new System.EventHandler(this.teamviewerHostToolStripMenuItem_Click);
             // 
             // hilfeToolStripMenuItem
             // 
@@ -353,27 +387,6 @@
             // 
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
-            // 
-            // teamviewerQSToolStripMenuItem
-            // 
-            this.teamviewerQSToolStripMenuItem.Name = "teamviewerQSToolStripMenuItem";
-            this.teamviewerQSToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.teamviewerQSToolStripMenuItem.Text = "Teamviewer QS";
-            this.teamviewerQSToolStripMenuItem.Click += new System.EventHandler(this.teamviewerQSToolStripMenuItem_Click);
-            // 
-            // teamviewerHostToolStripMenuItem
-            // 
-            this.teamviewerHostToolStripMenuItem.Name = "teamviewerHostToolStripMenuItem";
-            this.teamviewerHostToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.teamviewerHostToolStripMenuItem.Text = "Teamviewer Host";
-            this.teamviewerHostToolStripMenuItem.Click += new System.EventHandler(this.teamviewerHostToolStripMenuItem_Click);
-            // 
-            // advancedIPScannerToolStripMenuItem
-            // 
-            this.advancedIPScannerToolStripMenuItem.Name = "advancedIPScannerToolStripMenuItem";
-            this.advancedIPScannerToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.advancedIPScannerToolStripMenuItem.Text = "Advanced IP Scanner";
-            this.advancedIPScannerToolStripMenuItem.Click += new System.EventHandler(this.advancedIPScannerToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -434,6 +447,7 @@
         private System.Windows.Forms.ToolStripMenuItem teamviewerQSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teamviewerHostToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem advancedIPScannerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mailKontenToolStripMenuItem;
     }
 }
 

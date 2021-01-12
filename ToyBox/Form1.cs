@@ -135,7 +135,14 @@ namespace ToyBox
         #region CMD-Tools > IISRESET //runas
         private void iISRESETToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CProcessStart.PStart("cmd.exe", "/k", "iisreset", true);
+            if(Win32ServiceTools.GetServiceInstallVerification("W3SVC") ==true)
+            {
+                CProcessStart.PStart("cmd.exe", "/k", "iisreset", true);
+            }
+            else
+            {
+                MessageBox.Show("WWW-Publishingdienst ist nicht installiert.");
+            }            
         }
 
 
@@ -214,12 +221,7 @@ namespace ToyBox
         }
         #endregion
 
-        #region System-Tools > Systemsteuerung
-        private void systemsteuerunglegacyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CProcessStart.PStart("control.exe");
-        }
-        #endregion
+       
 
         #region System-Tools > Computerverwaltung
         private void computerverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
@@ -290,6 +292,19 @@ namespace ToyBox
         }
         #endregion
 
+        #region System-Tools > Systemsteuerung
+        private void systemsteuerunglegacyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CProcessStart.PStart("control.exe");
+        }
+        #endregion
+
+        #region System-Tools > Systemsteuerung > Mail-Konten
+        private void mailKontenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("control.exe", "MLCFG32.CPL");
+        }
+        #endregion
         /*
         --------------------------------------------------------------------------
         Menüpunkt Software Downloads
@@ -413,9 +428,11 @@ namespace ToyBox
 
 
 
+
+
         #endregion
 
- 
+      
 
     }
 }

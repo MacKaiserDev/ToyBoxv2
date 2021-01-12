@@ -29,6 +29,7 @@ namespace ToyBox
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CMD_Tools_slmgr_EnterKey));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Eingabe_Win_Key = new System.Windows.Forms.TextBox();
@@ -69,6 +70,7 @@ namespace ToyBox
             this.Controls.Add(this.Eingabe_Win_Key);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CMD_Tools_slmgr_EnterKey";
             this.Text = "Windows Key";
             this.ResumeLayout(false);

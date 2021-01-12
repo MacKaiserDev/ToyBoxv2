@@ -6,8 +6,8 @@ C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.csproj.CoreCompileI
 C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.csprojAssemblyReference.cache
 C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.CMD_Tools_slmgr_EnterKey.resources
 C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox.CMD_Tools_Ping.resources
-C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Release\ToyBox._net.4.6.exe.config
-C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Release\ToyBox._net.4.6.exe
-C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Release\ToyBox._net.4.6.pdb
-C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox._net.4.6.exe
-C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox._net.4.6.pdb
+C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Release\ToyBox._net.3.5.exe.config
+C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Release\ToyBox._net.3.5.exe
+C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Release\ToyBox._net.3.5.pdb
+C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox._net.3.5.exe
+C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Release\ToyBox._net.3.5.pdb
