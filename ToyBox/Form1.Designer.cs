@@ -69,6 +69,9 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.aDToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dCDIAGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.netdomQueryFSMOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +91,7 @@
             // cMDToolsToolStripMenuItem
             // 
             this.cMDToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aDToolsToolStripMenuItem,
             this.changeLogonToolStripMenuItem,
             this.changeUserToolStripMenuItem,
             this.flushDNSToolStripMenuItem,
@@ -388,6 +392,30 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // aDToolsToolStripMenuItem
+            // 
+            this.aDToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dCDIAGToolStripMenuItem,
+            this.netdomQueryFSMOToolStripMenuItem});
+            this.aDToolsToolStripMenuItem.Name = "aDToolsToolStripMenuItem";
+            this.aDToolsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.aDToolsToolStripMenuItem.Text = "AD-Tools";
+            this.aDToolsToolStripMenuItem.Click += new System.EventHandler(this.aDToolsToolStripMenuItem_Click);
+            // 
+            // dCDIAGToolStripMenuItem
+            // 
+            this.dCDIAGToolStripMenuItem.Name = "dCDIAGToolStripMenuItem";
+            this.dCDIAGToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.dCDIAGToolStripMenuItem.Text = "DCDIAG";
+            this.dCDIAGToolStripMenuItem.Click += new System.EventHandler(this.dCDIAGToolStripMenuItem_Click);
+            // 
+            // netdomQueryFSMOToolStripMenuItem
+            // 
+            this.netdomQueryFSMOToolStripMenuItem.Name = "netdomQueryFSMOToolStripMenuItem";
+            this.netdomQueryFSMOToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.netdomQueryFSMOToolStripMenuItem.Text = "Netdom Query FSMO";
+            this.netdomQueryFSMOToolStripMenuItem.Click += new System.EventHandler(this.netdomQueryFSMOToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +476,9 @@
         private System.Windows.Forms.ToolStripMenuItem teamviewerHostToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem advancedIPScannerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mailKontenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aDToolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dCDIAGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem netdomQueryFSMOToolStripMenuItem;
     }
 }
 

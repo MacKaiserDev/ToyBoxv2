@@ -13,9 +13,8 @@ namespace ToyBox
         public static bool GetServiceInstallVerification(string ServiceName)
         {
             bool bDienstVorhanden = false;
-            
-            ServiceController[] ScServices;
-            ScServices = ServiceController.GetServices();
+
+            ServiceController[] ScServices = ServiceController.GetServices();
 
             foreach (ServiceController srvTarget in ScServices)
             {

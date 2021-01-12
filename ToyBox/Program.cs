@@ -15,7 +15,6 @@ namespace ToyBox
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Programstart ohne Login
             Application.Run(new Form1());
 
         }

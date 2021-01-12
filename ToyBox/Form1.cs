@@ -30,10 +30,45 @@ namespace ToyBox
         --------------------------------------------------------------------------
         Benüpunkt CMD-Tools
         --------------------------------------------------------------------------
-        */ 
+        */
+        #region CMD-Tools > AD-Tools
+        //Überpunkt AD-Tools Aktuell keine Funktion
+        private void aDToolsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
 
-        
+        #endregion
+
+        #region CMD-Tools > AD-Tools > DCDIAG
+        private void dCDIAGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Prüft ob auf der Maschine der ACtive Directory Dienst installier ist. 
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                CProcessStart.PStart("cmd.exe", "/k", "dcdiag", true);
+            }
+            else
+            {
+                MessageBox.Show("Diese Maschine ist kein Domaincontroller.");
+            }      
+        }
+        #endregion
+
+        #region CMD-Tools > AD-Tools > netdom Query FSMO
+        private void netdomQueryFSMOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Prüft ob auf der Maschine der ACtive Directory Dienst installier ist. 
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                CProcessStart.PStart("cmd.exe", "/k", "netdom query fsmo", true);
+            }
+            else
+            {
+                MessageBox.Show("Diese Maschine ist kein Domaincontroller.");
+            }
+        }
+        #endregion     
 
         #region CMD-Tools > Change logon > Enable //runas
         private void enableToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,7 +76,6 @@ namespace ToyBox
             try
             {
                 CProcessStart.PStart("cmd.exe", "/k", "change logon /enable", true);
-               
             }
             catch
             {
@@ -430,9 +464,12 @@ namespace ToyBox
 
 
 
+
+
+
+
         #endregion
 
-      
-
+   
     }
 }
