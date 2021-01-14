@@ -73,6 +73,7 @@
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tracertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regeditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -251,6 +252,7 @@
             this.diensteToolStripMenuItem,
             this.datenträgerverwaltungToolStripMenuItem,
             this.netzwerkeinstellungenToolStripMenuItem,
+            this.regeditToolStripMenuItem,
             this.systemsteuerunglegacyToolStripMenuItem});
             this.systemToolsToolStripMenuItem.Name = "systemToolsToolStripMenuItem";
             this.systemToolsToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
@@ -425,6 +427,13 @@
             this.tracertToolStripMenuItem.Text = "Tracert";
             this.tracertToolStripMenuItem.Click += new System.EventHandler(this.tracertToolStripMenuItem_Click);
             // 
+            // regeditToolStripMenuItem
+            // 
+            this.regeditToolStripMenuItem.Name = "regeditToolStripMenuItem";
+            this.regeditToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.regeditToolStripMenuItem.Text = "Regedit";
+            this.regeditToolStripMenuItem.Click += new System.EventHandler(this.regeditToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,6 +498,7 @@
         private System.Windows.Forms.ToolStripMenuItem dCDIAGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem netdomQueryFSMOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tracertToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem regeditToolStripMenuItem;
     }
 }
 

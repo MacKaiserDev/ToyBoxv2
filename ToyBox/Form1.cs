@@ -335,6 +335,13 @@ namespace ToyBox
         }
         #endregion
 
+        #region System-Tools > Regedit
+        private void regeditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CProcessStart.PStart("regedit.exe");
+        }
+        #endregion
+
         #region System-Tools > Systemsteuerung
         private void systemsteuerunglegacyToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -478,9 +485,11 @@ namespace ToyBox
 
 
 
+
+
         #endregion
 
-        
+   
 
     }
 }
