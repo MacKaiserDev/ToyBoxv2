@@ -224,6 +224,15 @@ namespace ToyBox
         }
         #endregion
 
+        #region CMD-Tools > Tracert
+        private void tracertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CMD_Tools_Tracert Tracert = new CMD_Tools_Tracert();
+            Tracert.Show();
+            Tracert.Focus();
+        }
+        #endregion
+
         #region CMD-Tools > Windows-Aktivierung slmgr //runas
         private void windowsAktivierungSlmgrToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -468,8 +477,10 @@ namespace ToyBox
 
 
 
+
         #endregion
 
-   
+        
+
     }
 }

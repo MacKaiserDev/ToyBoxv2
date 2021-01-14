@@ -105,6 +105,12 @@
     <Compile Include="CMD-Tools-Ping.Designer.cs">
       <DependentUpon>CMD-Tools-Ping.cs</DependentUpon>
     </Compile>
+    <Compile Include="CMD-Tools_Tracert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMD-Tools_Tracert.Designer.cs">
+      <DependentUpon>CMD-Tools_Tracert.cs</DependentUpon>
+    </Compile>
     <Compile Include="CMD_Tools_slmgr_EnterKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CMD-Tools-Ping.resx">
       <DependentUpon>CMD-Tools-Ping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMD-Tools_Tracert.resx">
+      <DependentUpon>CMD-Tools_Tracert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CMD_Tools_slmgr_EnterKey.resx">
       <DependentUpon>CMD_Tools_slmgr_EnterKey.cs</DependentUpon>

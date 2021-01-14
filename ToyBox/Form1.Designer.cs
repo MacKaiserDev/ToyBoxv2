@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cMDToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dCDIAGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.netdomQueryFSMOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeLogonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,14 +42,14 @@
             this.enableToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.disableToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.queryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gpupdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flushDNSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gpupdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iISRESETToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iPConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixEnviromentalVariablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.windowsAktivierungSlmgrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whoamiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsAktivierungSlmgrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.computerverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diensteSteuerungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,9 +72,7 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.aDToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dCDIAGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.netdomQueryFSMOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tracertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,10 +102,35 @@
             this.fixEnviromentalVariablesToolStripMenuItem,
             this.pingToolStripMenuItem,
             this.whoamiToolStripMenuItem,
-            this.windowsAktivierungSlmgrToolStripMenuItem});
+            this.windowsAktivierungSlmgrToolStripMenuItem,
+            this.tracertToolStripMenuItem});
             this.cMDToolsToolStripMenuItem.Name = "cMDToolsToolStripMenuItem";
             this.cMDToolsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.cMDToolsToolStripMenuItem.Text = "CMD-Tools";
+            // 
+            // aDToolsToolStripMenuItem
+            // 
+            this.aDToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dCDIAGToolStripMenuItem,
+            this.netdomQueryFSMOToolStripMenuItem});
+            this.aDToolsToolStripMenuItem.Name = "aDToolsToolStripMenuItem";
+            this.aDToolsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.aDToolsToolStripMenuItem.Text = "AD-Tools";
+            this.aDToolsToolStripMenuItem.Click += new System.EventHandler(this.aDToolsToolStripMenuItem_Click);
+            // 
+            // dCDIAGToolStripMenuItem
+            // 
+            this.dCDIAGToolStripMenuItem.Name = "dCDIAGToolStripMenuItem";
+            this.dCDIAGToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.dCDIAGToolStripMenuItem.Text = "DCDIAG";
+            this.dCDIAGToolStripMenuItem.Click += new System.EventHandler(this.dCDIAGToolStripMenuItem_Click);
+            // 
+            // netdomQueryFSMOToolStripMenuItem
+            // 
+            this.netdomQueryFSMOToolStripMenuItem.Name = "netdomQueryFSMOToolStripMenuItem";
+            this.netdomQueryFSMOToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.netdomQueryFSMOToolStripMenuItem.Text = "Netdom Query FSMO";
+            this.netdomQueryFSMOToolStripMenuItem.Click += new System.EventHandler(this.netdomQueryFSMOToolStripMenuItem_Click);
             // 
             // changeLogonToolStripMenuItem
             // 
@@ -160,19 +186,19 @@
             this.queryToolStripMenuItem.Text = "Query";
             this.queryToolStripMenuItem.Click += new System.EventHandler(this.queryToolStripMenuItem_Click);
             // 
-            // gpupdateToolStripMenuItem
-            // 
-            this.gpupdateToolStripMenuItem.Name = "gpupdateToolStripMenuItem";
-            this.gpupdateToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.gpupdateToolStripMenuItem.Text = "gpupdate";
-            this.gpupdateToolStripMenuItem.Click += new System.EventHandler(this.gpupdateToolStripMenuItem_Click);
-            // 
             // flushDNSToolStripMenuItem
             // 
             this.flushDNSToolStripMenuItem.Name = "flushDNSToolStripMenuItem";
             this.flushDNSToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.flushDNSToolStripMenuItem.Text = "FlushDNS";
             this.flushDNSToolStripMenuItem.Click += new System.EventHandler(this.flushDNSToolStripMenuItem_Click);
+            // 
+            // gpupdateToolStripMenuItem
+            // 
+            this.gpupdateToolStripMenuItem.Name = "gpupdateToolStripMenuItem";
+            this.gpupdateToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.gpupdateToolStripMenuItem.Text = "gpupdate";
+            this.gpupdateToolStripMenuItem.Click += new System.EventHandler(this.gpupdateToolStripMenuItem_Click);
             // 
             // iISRESETToolStripMenuItem
             // 
@@ -203,19 +229,19 @@
             this.pingToolStripMenuItem.Text = "Ping";
             this.pingToolStripMenuItem.Click += new System.EventHandler(this.pingToolStripMenuItem_Click);
             // 
-            // windowsAktivierungSlmgrToolStripMenuItem
-            // 
-            this.windowsAktivierungSlmgrToolStripMenuItem.Name = "windowsAktivierungSlmgrToolStripMenuItem";
-            this.windowsAktivierungSlmgrToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.windowsAktivierungSlmgrToolStripMenuItem.Text = "Windows-Aktivierung slmgr";
-            this.windowsAktivierungSlmgrToolStripMenuItem.Click += new System.EventHandler(this.windowsAktivierungSlmgrToolStripMenuItem_Click);
-            // 
             // whoamiToolStripMenuItem
             // 
             this.whoamiToolStripMenuItem.Name = "whoamiToolStripMenuItem";
             this.whoamiToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.whoamiToolStripMenuItem.Text = "whoami";
             this.whoamiToolStripMenuItem.Click += new System.EventHandler(this.whoamiToolStripMenuItem_Click);
+            // 
+            // windowsAktivierungSlmgrToolStripMenuItem
+            // 
+            this.windowsAktivierungSlmgrToolStripMenuItem.Name = "windowsAktivierungSlmgrToolStripMenuItem";
+            this.windowsAktivierungSlmgrToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.windowsAktivierungSlmgrToolStripMenuItem.Text = "Windows-Aktivierung slmgr";
+            this.windowsAktivierungSlmgrToolStripMenuItem.Click += new System.EventHandler(this.windowsAktivierungSlmgrToolStripMenuItem_Click);
             // 
             // systemToolsToolStripMenuItem
             // 
@@ -320,7 +346,7 @@
             // mailKontenToolStripMenuItem
             // 
             this.mailKontenToolStripMenuItem.Name = "mailKontenToolStripMenuItem";
-            this.mailKontenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mailKontenToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.mailKontenToolStripMenuItem.Text = "Mail-Konten";
             this.mailKontenToolStripMenuItem.Click += new System.EventHandler(this.mailKontenToolStripMenuItem_Click);
             // 
@@ -392,29 +418,12 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // aDToolsToolStripMenuItem
+            // tracertToolStripMenuItem
             // 
-            this.aDToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dCDIAGToolStripMenuItem,
-            this.netdomQueryFSMOToolStripMenuItem});
-            this.aDToolsToolStripMenuItem.Name = "aDToolsToolStripMenuItem";
-            this.aDToolsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.aDToolsToolStripMenuItem.Text = "AD-Tools";
-            this.aDToolsToolStripMenuItem.Click += new System.EventHandler(this.aDToolsToolStripMenuItem_Click);
-            // 
-            // dCDIAGToolStripMenuItem
-            // 
-            this.dCDIAGToolStripMenuItem.Name = "dCDIAGToolStripMenuItem";
-            this.dCDIAGToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.dCDIAGToolStripMenuItem.Text = "DCDIAG";
-            this.dCDIAGToolStripMenuItem.Click += new System.EventHandler(this.dCDIAGToolStripMenuItem_Click);
-            // 
-            // netdomQueryFSMOToolStripMenuItem
-            // 
-            this.netdomQueryFSMOToolStripMenuItem.Name = "netdomQueryFSMOToolStripMenuItem";
-            this.netdomQueryFSMOToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.netdomQueryFSMOToolStripMenuItem.Text = "Netdom Query FSMO";
-            this.netdomQueryFSMOToolStripMenuItem.Click += new System.EventHandler(this.netdomQueryFSMOToolStripMenuItem_Click);
+            this.tracertToolStripMenuItem.Name = "tracertToolStripMenuItem";
+            this.tracertToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.tracertToolStripMenuItem.Text = "Tracert";
+            this.tracertToolStripMenuItem.Click += new System.EventHandler(this.tracertToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -479,6 +488,7 @@
         private System.Windows.Forms.ToolStripMenuItem aDToolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dCDIAGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem netdomQueryFSMOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tracertToolStripMenuItem;
     }
 }
 
