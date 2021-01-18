@@ -21,8 +21,8 @@ namespace MySQLConnetion1
                                      ";port=3306"+
                                      ";database="+Database_Config.Get_Database_Name();
 
-            MySqlConnection MeineCon = new MySqlConnection(DatabaseConnect);
-            MySqlDataReader Reader = null;
+            //MySqlConnection MeineCon = new MySqlConnection(DatabaseConnect);
+            //MySqlDataReader Reader = null;
 
             
 
@@ -36,7 +36,7 @@ namespace MySQLConnetion1
 
             try
             {
-                Anfrage.InsertIntoMySQL(DatabaseConnect, "Aufrufe", 6, 5, "Zeit", "1.565");   
+                Anfrage.InsertIntoMySQL(DatabaseConnect, "Aufrufe", 5, "1.565");   
                 
                 ////Inhalt auslesen.
                 //MeineCon.Open();
@@ -61,7 +61,7 @@ namespace MySQLConnetion1
             }
 
 
-            MeineCon.Close();
+            //MeineCon.Close();
             Console.ReadKey();
             
         }
