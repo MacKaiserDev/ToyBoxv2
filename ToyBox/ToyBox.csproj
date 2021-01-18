@@ -117,6 +117,7 @@
     <Compile Include="CMD_Tools_slmgr_EnterKey.Designer.cs">
       <DependentUpon>CMD_Tools_slmgr_EnterKey.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\Database_Config.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

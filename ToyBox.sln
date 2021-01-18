@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CMD-Tools", "CMD-Tools", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Info", "Info", "{B7B447BE-318C-4E41-9008-1C3CCEA6E9A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLConnetion", "MySQLConnetion\MySQLConnetion.csproj", "{2808EB9F-444C-4EC5-8EF4-DCB6F16EF6FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,12 +34,17 @@ Global
 		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2808EB9F-444C-4EC5-8EF4-DCB6F16EF6FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2808EB9F-444C-4EC5-8EF4-DCB6F16EF6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2808EB9F-444C-4EC5-8EF4-DCB6F16EF6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2808EB9F-444C-4EC5-8EF4-DCB6F16EF6FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{98D92EBA-EF8D-483D-AE07-BB8C27E4636B} = {289C64EC-FD5E-4624-B238-0EEED01D527E}
+		{2808EB9F-444C-4EC5-8EF4-DCB6F16EF6FF} = {289C64EC-FD5E-4624-B238-0EEED01D527E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C12EA6C2-5523-4B2C-8BBD-D0366D45214E}
