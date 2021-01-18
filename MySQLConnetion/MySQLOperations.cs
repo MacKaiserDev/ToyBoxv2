@@ -44,14 +44,16 @@ namespace MySQLConnetion1
 
             //Aus Spalten Command zusammebauen
             string sCOMMANDTEXT = "INSERT INTO `"+MyTable+"`(`"+LsTableHead[0]+ "`, `" + LsTableHead[1] + "`, `" + LsTableHead[2] + "`, `" + LsTableHead[3] + "`) VALUES('"+ID+"', '"+Funktion+"', '"+Zeit+"', '"+OS_Version+"')";
-            
-            
-            
-            
-            Console.WriteLine(sCOMMANDTEXT);
-            
-            Console.ReadLine();
-        }
+
+            //Verbindung vorbereiten
+            MySqlConnection MeineCon = new MySqlConnection(ConnectionString);
+            MeineCon.Open();
+
+            //Bereitet Command vor
+            MySqlCommand cmd = new MySqlCommand(sCOMMANDTEXT, MeineCon);
+            //excute Command
+            cmd.ExecuteNonQuery();     
+         }
 
         public void GetMySqlData( string ConnectionString)
         {

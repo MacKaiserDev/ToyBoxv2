@@ -36,17 +36,7 @@ namespace MySQLConnetion1
 
             try
             {
-                Anfrage.InsertIntoMySQL(DatabaseConnect, "Aufrufe", 6, 5, "Zeit", "1.565");
-                //MeineCon.Close();
-                //MeineCon.Open();
-                //string sCOMMANDTEXT= "SELECT * FROM Aufrufe";
-                //string sCOMMANDTEXT = "INSERT INTO Aufrufe(ID,Funktion,Zeit,OS-Version) VALUES (2,1,2021-01-14 21:32:02,1,5);";
-                //Insert in Tabelle
-                string sCOMMANDTEXT = "INSERT INTO `Aufrufe`(`ID`, `Funktion`, `Zeit`, `OS-Version`) VALUES('5', '1', '2021-01-14 21:32:02', '1.5')";
-                //Build Command
-                MySqlCommand cmd = new MySqlCommand(sCOMMANDTEXT, MeineCon);
-                //excute Command
-                //cmd.ExecuteNonQuery();     
+                Anfrage.InsertIntoMySQL(DatabaseConnect, "Aufrufe", 6, 5, "Zeit", "1.565");   
                 
                 ////Inhalt auslesen.
                 //MeineCon.Open();
