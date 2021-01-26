@@ -453,6 +453,24 @@ namespace ToyBox
             MessageBox.Show("Teamviewer Host wird heruntergeladen. Die Datei wurde unter: " + Zielpfad + " abgelegt. ");
         }
         #endregion
+
+        #region Software-Tools > TreeSize Free
+        private void treeSizeFreeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Liest den Downloads Ordner des aktuellen Users aus und speichert den Download von Teamviewer an dieser Stelle. 
+            string path = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+
+            string Zieldatei_TreeSize = "TreeSizeFreeSetup.exe";
+            string Zielpfad = path + @"\" + Zieldatei_TreeSize;
+
+            WebClient wb = new WebClient();
+            wb.DownloadFileAsync(new System.Uri("http://itskk.de/Upload/TreeSizeFreeSetup.exe"), Zielpfad);
+            //Process.Start(path);
+
+            MessageBox.Show("TTreeSize Free wird heruntergeladen. Die Datei wurde unter: " + Zielpfad + " abgelegt. ");
+        }
+
+        #endregion
         /*
        --------------------------------------------------------------------------
        Menüpunkt Hilfe
@@ -487,9 +505,10 @@ namespace ToyBox
 
 
 
+
+
         #endregion
 
-   
-
+     
     }
 }

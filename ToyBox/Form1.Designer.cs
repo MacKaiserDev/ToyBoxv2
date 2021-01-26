@@ -50,6 +50,7 @@
             this.pingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.whoamiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsAktivierungSlmgrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tracertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.computerverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diensteSteuerungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +62,7 @@
             this.diensteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datenträgerverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.netzwerkeinstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regeditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemsteuerunglegacyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mailKontenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softwareDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,8 +74,7 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.tracertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regeditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.treeSizeFreeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -244,6 +245,13 @@
             this.windowsAktivierungSlmgrToolStripMenuItem.Text = "Windows-Aktivierung slmgr";
             this.windowsAktivierungSlmgrToolStripMenuItem.Click += new System.EventHandler(this.windowsAktivierungSlmgrToolStripMenuItem_Click);
             // 
+            // tracertToolStripMenuItem
+            // 
+            this.tracertToolStripMenuItem.Name = "tracertToolStripMenuItem";
+            this.tracertToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.tracertToolStripMenuItem.Text = "Tracert";
+            this.tracertToolStripMenuItem.Click += new System.EventHandler(this.tracertToolStripMenuItem_Click);
+            // 
             // systemToolsToolStripMenuItem
             // 
             this.systemToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -335,6 +343,13 @@
             this.netzwerkeinstellungenToolStripMenuItem.ToolTipText = "Windows Netzwerkadapter";
             this.netzwerkeinstellungenToolStripMenuItem.Click += new System.EventHandler(this.netzwerkeinstellungenToolStripMenuItem_Click);
             // 
+            // regeditToolStripMenuItem
+            // 
+            this.regeditToolStripMenuItem.Name = "regeditToolStripMenuItem";
+            this.regeditToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.regeditToolStripMenuItem.Text = "Regedit";
+            this.regeditToolStripMenuItem.Click += new System.EventHandler(this.regeditToolStripMenuItem_Click);
+            // 
             // systemsteuerunglegacyToolStripMenuItem
             // 
             this.systemsteuerunglegacyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -359,7 +374,8 @@
             this.chromeToolStripMenuItem,
             this.firefoxToolStripMenuItem,
             this.teamviewerQSToolStripMenuItem,
-            this.teamviewerHostToolStripMenuItem});
+            this.teamviewerHostToolStripMenuItem,
+            this.treeSizeFreeToolStripMenuItem});
             this.softwareDownloadToolStripMenuItem.Name = "softwareDownloadToolStripMenuItem";
             this.softwareDownloadToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
             this.softwareDownloadToolStripMenuItem.Text = "Software-Download";
@@ -420,19 +436,12 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // tracertToolStripMenuItem
+            // treeSizeFreeToolStripMenuItem
             // 
-            this.tracertToolStripMenuItem.Name = "tracertToolStripMenuItem";
-            this.tracertToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.tracertToolStripMenuItem.Text = "Tracert";
-            this.tracertToolStripMenuItem.Click += new System.EventHandler(this.tracertToolStripMenuItem_Click);
-            // 
-            // regeditToolStripMenuItem
-            // 
-            this.regeditToolStripMenuItem.Name = "regeditToolStripMenuItem";
-            this.regeditToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.regeditToolStripMenuItem.Text = "Regedit";
-            this.regeditToolStripMenuItem.Click += new System.EventHandler(this.regeditToolStripMenuItem_Click);
+            this.treeSizeFreeToolStripMenuItem.Name = "treeSizeFreeToolStripMenuItem";
+            this.treeSizeFreeToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.treeSizeFreeToolStripMenuItem.Text = "TreeSizeFree";
+            this.treeSizeFreeToolStripMenuItem.Click += new System.EventHandler(this.treeSizeFreeToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -499,6 +508,7 @@
         private System.Windows.Forms.ToolStripMenuItem netdomQueryFSMOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tracertToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regeditToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem treeSizeFreeToolStripMenuItem;
     }
 }
 

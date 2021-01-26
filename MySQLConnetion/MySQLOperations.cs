@@ -11,7 +11,6 @@ namespace MySQLConnetion1
     class MySQLOperations
     {
         private List<string> LsTableHead = new List<string>();
-        private int CurrentID = 0;
 
         //Diese Methode schriebt die Spaltennamen in die Liste LsTableHead
         private void SetTableHead(string ConnectionString, string Table)
@@ -26,7 +25,7 @@ namespace MySQLConnetion1
             //Führt das Kommando aus
             MySqlDataReader HeaderReader = cmd.ExecuteReader();
 
-            //Konvertiert die Rückgabewerte in den Kopf
+            //Konvertiert die Rückgabewerte in die Liste LsTableHead
             while (HeaderReader.Read())
             {
                 LsTableHead.Add(Convert.ToString(HeaderReader.GetString(0)));
@@ -100,10 +99,5 @@ namespace MySQLConnetion1
             //excute Command
             cmd.ExecuteNonQuery();     
          }
-
-        public void GetMySqlData( string ConnectionString)
-        {
-            //SetTableHead(ConnectionString,);
-        }
     }
 }
