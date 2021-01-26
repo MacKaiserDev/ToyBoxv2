@@ -71,10 +71,11 @@
             this.firefoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamviewerQSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teamviewerHostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.treeSizeFreeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.treeSizeFreeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gPRESULTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,7 +115,8 @@
             // 
             this.aDToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dCDIAGToolStripMenuItem,
-            this.netdomQueryFSMOToolStripMenuItem});
+            this.netdomQueryFSMOToolStripMenuItem,
+            this.gPRESULTToolStripMenuItem});
             this.aDToolsToolStripMenuItem.Name = "aDToolsToolStripMenuItem";
             this.aDToolsToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.aDToolsToolStripMenuItem.Text = "AD-Tools";
@@ -416,6 +418,13 @@
             this.teamviewerHostToolStripMenuItem.Text = "Teamviewer Host";
             this.teamviewerHostToolStripMenuItem.Click += new System.EventHandler(this.teamviewerHostToolStripMenuItem_Click);
             // 
+            // treeSizeFreeToolStripMenuItem
+            // 
+            this.treeSizeFreeToolStripMenuItem.Name = "treeSizeFreeToolStripMenuItem";
+            this.treeSizeFreeToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.treeSizeFreeToolStripMenuItem.Text = "TreeSizeFree";
+            this.treeSizeFreeToolStripMenuItem.Click += new System.EventHandler(this.treeSizeFreeToolStripMenuItem_Click);
+            // 
             // hilfeToolStripMenuItem
             // 
             this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -427,7 +436,7 @@
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.infoToolStripMenuItem.Text = "Info";
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
@@ -436,12 +445,12 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // treeSizeFreeToolStripMenuItem
+            // gPRESULTToolStripMenuItem
             // 
-            this.treeSizeFreeToolStripMenuItem.Name = "treeSizeFreeToolStripMenuItem";
-            this.treeSizeFreeToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.treeSizeFreeToolStripMenuItem.Text = "TreeSizeFree";
-            this.treeSizeFreeToolStripMenuItem.Click += new System.EventHandler(this.treeSizeFreeToolStripMenuItem_Click);
+            this.gPRESULTToolStripMenuItem.Name = "gPRESULTToolStripMenuItem";
+            this.gPRESULTToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.gPRESULTToolStripMenuItem.Text = "GPRESULT";
+            this.gPRESULTToolStripMenuItem.Click += new System.EventHandler(this.gPRESULTToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -509,6 +518,7 @@
         private System.Windows.Forms.ToolStripMenuItem tracertToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regeditToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem treeSizeFreeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gPRESULTToolStripMenuItem;
     }
 }
 

@@ -68,7 +68,23 @@ namespace ToyBox
                 MessageBox.Show("Diese Maschine ist kein Domaincontroller.");
             }
         }
-        #endregion     
+        #endregion
+
+        #region CMD-Tools > AD-Tools > GPRESULT
+        private void gPRESULTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Prüft ob auf der Maschine der ACtive Directory Dienst installier ist. 
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                CProcessStart.PStart("cmd.exe", "/k", "gpresult", true);
+            }
+            else
+            {
+                MessageBox.Show("Diese Maschine ist kein Domaincontroller.");
+            }
+        }
+        #endregion
+
 
         #region CMD-Tools > Change logon > Enable //runas
         private void enableToolStripMenuItem_Click(object sender, EventArgs e)
@@ -507,8 +523,9 @@ namespace ToyBox
 
 
 
+
         #endregion
 
-     
+        
     }
 }
