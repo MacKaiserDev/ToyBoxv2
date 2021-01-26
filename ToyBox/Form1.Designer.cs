@@ -35,6 +35,7 @@
             this.aDToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dCDIAGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.netdomQueryFSMOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gPRESULTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeLogonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +66,8 @@
             this.regeditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemsteuerunglegacyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mailKontenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gruppenrichtlienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lokalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softwareDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.advancedIPScannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +78,7 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.gPRESULTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.domäneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,6 +138,13 @@
             this.netdomQueryFSMOToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.netdomQueryFSMOToolStripMenuItem.Text = "Netdom Query FSMO";
             this.netdomQueryFSMOToolStripMenuItem.Click += new System.EventHandler(this.netdomQueryFSMOToolStripMenuItem_Click);
+            // 
+            // gPRESULTToolStripMenuItem
+            // 
+            this.gPRESULTToolStripMenuItem.Name = "gPRESULTToolStripMenuItem";
+            this.gPRESULTToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.gPRESULTToolStripMenuItem.Text = "GPRESULT";
+            this.gPRESULTToolStripMenuItem.Click += new System.EventHandler(this.gPRESULTToolStripMenuItem_Click);
             // 
             // changeLogonToolStripMenuItem
             // 
@@ -261,6 +271,7 @@
             this.diensteSteuerungToolStripMenuItem,
             this.diensteToolStripMenuItem,
             this.datenträgerverwaltungToolStripMenuItem,
+            this.gruppenrichtlienToolStripMenuItem,
             this.netzwerkeinstellungenToolStripMenuItem,
             this.regeditToolStripMenuItem,
             this.systemsteuerunglegacyToolStripMenuItem});
@@ -369,6 +380,22 @@
             this.mailKontenToolStripMenuItem.Text = "Mail-Konten";
             this.mailKontenToolStripMenuItem.Click += new System.EventHandler(this.mailKontenToolStripMenuItem_Click);
             // 
+            // gruppenrichtlienToolStripMenuItem
+            // 
+            this.gruppenrichtlienToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lokalToolStripMenuItem,
+            this.domäneToolStripMenuItem});
+            this.gruppenrichtlienToolStripMenuItem.Name = "gruppenrichtlienToolStripMenuItem";
+            this.gruppenrichtlienToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.gruppenrichtlienToolStripMenuItem.Text = "Sicherheitsrichtlinien";
+            // 
+            // lokalToolStripMenuItem
+            // 
+            this.lokalToolStripMenuItem.Name = "lokalToolStripMenuItem";
+            this.lokalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lokalToolStripMenuItem.Text = "Lokal";
+            this.lokalToolStripMenuItem.Click += new System.EventHandler(this.lokalToolStripMenuItem_Click);
+            // 
             // softwareDownloadToolStripMenuItem
             // 
             this.softwareDownloadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -436,7 +463,7 @@
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
             this.infoToolStripMenuItem.Text = "Info";
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
@@ -445,12 +472,12 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // gPRESULTToolStripMenuItem
+            // domäneToolStripMenuItem
             // 
-            this.gPRESULTToolStripMenuItem.Name = "gPRESULTToolStripMenuItem";
-            this.gPRESULTToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.gPRESULTToolStripMenuItem.Text = "GPRESULT";
-            this.gPRESULTToolStripMenuItem.Click += new System.EventHandler(this.gPRESULTToolStripMenuItem_Click);
+            this.domäneToolStripMenuItem.Name = "domäneToolStripMenuItem";
+            this.domäneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.domäneToolStripMenuItem.Text = "Domäne";
+            this.domäneToolStripMenuItem.Click += new System.EventHandler(this.domäneToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -519,6 +546,9 @@
         private System.Windows.Forms.ToolStripMenuItem regeditToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem treeSizeFreeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gPRESULTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gruppenrichtlienToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lokalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem domäneToolStripMenuItem;
     }
 }
 

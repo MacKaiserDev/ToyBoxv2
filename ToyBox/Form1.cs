@@ -76,7 +76,7 @@ namespace ToyBox
             //Prüft ob auf der Maschine der ACtive Directory Dienst installier ist. 
             if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
             {
-                CProcessStart.PStart("cmd.exe", "/k", "gpresult", true);
+                CProcessStart.PStart("cmd.exe", "/k", "gpresult /r", true);
             }
             else
             {
@@ -344,6 +344,20 @@ namespace ToyBox
         }
         #endregion
 
+        #region System-Tools > Sicherheitsrichtlinien > Lokal
+        private void lokalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("secpol.msc");
+        }
+        #endregion
+
+        #region System-Tools > Sicherheitsrichtlinien > Domäne
+        private void domäneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("GPmc.msc");
+        }
+        #endregion
+
         #region System-Tools > Netzwerkadaptereinstellungen
         private void netzwerkeinstellungenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -500,32 +514,8 @@ namespace ToyBox
             InfoForm.Focus();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         #endregion
 
-        
+       
     }
 }
