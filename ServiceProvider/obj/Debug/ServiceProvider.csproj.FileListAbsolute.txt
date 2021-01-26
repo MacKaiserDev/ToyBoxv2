@@ -1,5 +1,0 @@
-C:\Users\stefa\source\repos\ToyBox\ServiceProvider\bin\Debug\ServiceProvider.exe
-C:\Users\stefa\source\repos\ToyBox\ServiceProvider\bin\Debug\ServiceProvider.pdb
-C:\Users\stefa\source\repos\ToyBox\ServiceProvider\obj\Debug\ServiceProvider.csproj.CoreCompileInputs.cache
-C:\Users\stefa\source\repos\ToyBox\ServiceProvider\obj\Debug\ServiceProvider.exe
-C:\Users\stefa\source\repos\ToyBox\ServiceProvider\obj\Debug\ServiceProvider.pdb
