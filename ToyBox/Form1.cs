@@ -85,7 +85,6 @@ namespace ToyBox
         }
         #endregion
 
-
         #region CMD-Tools > Change logon > Enable //runas
         private void enableToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -292,6 +291,13 @@ namespace ToyBox
         #endregion
 
         // Dienststeuerung Druckerwarteschlange
+        #region System-Tools > Datenträgerverwaltung
+        private void datenträgerverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("diskmgmt.msc");
+        }
+        #endregion
+
         #region System-Tools > Dienstesteuerung > Druckerwarteschlange Enable
         private void enableToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -337,10 +343,105 @@ namespace ToyBox
         }
         #endregion
 
-        #region System-Tools > Datenträgerverwaltung
-        private void datenträgerverwaltungToolStripMenuItem_Click(object sender, EventArgs e)
+        #region System-Tools > Domain-Verwaltung > Active Directory-Benutzer und Computer
+        private void activeDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("diskmgmt.msc");
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                System.Diagnostics.Process.Start("DSA.msc");
+            }
+            else
+            {
+                MessageBox.Show("Dieser Rechner ist kein Domaincontroller");
+            }
+        }
+        #endregion
+
+        #region System-Tools > Domain-Verwaltung > Active Directory-Domänen und Vertrauensstellungen
+        private void activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start("domain.msc");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Active Directory-Domänen und Vertrauensstellungen ist nicht installiert oder kann nicht aufgerufen werden.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Dieser Rechner ist kein Domaincontroller");
+            }
+        }
+        #endregion
+
+        #region System-Tools > Domain-Verwaltung > Active Directory-Standorte und Dienste
+        private void activeDirectoryStandorteUndDiensteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start("DSSITE.msc");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Active Directory-Standorte und Dienste ist nicht installiert oder kann nicht aufgerufen werden.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Dieser Rechner ist kein Domaincontroller");
+            }
+        }
+        #endregion
+
+        #region System-Tools > Domain-Verwaltung > Active Directory-Verwaltungscenter
+        private void activeDirectoryVerwaltungcenterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start("dsac.exe");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Active Directory-Verwaltungscenter ist nicht installiert oder kann nicht aufgerufen werden.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Dieser Rechner ist kein Domaincontroller");
+            }
+        }
+        #endregion
+
+        #region System-Tools > Domain-Verwaltung > ADSI Editor
+        private void aDSIEditorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start("ADSIEDIT.msc");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("ADSI Editor nicht installiert oder kann nicht aufgerufen werden.");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Dieser Rechner ist kein Domaincontroller");
+            }
         }
         #endregion
 
@@ -383,6 +484,14 @@ namespace ToyBox
         private void mailKontenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("control.exe", "MLCFG32.CPL");
+        }
+        #endregion
+
+        #region System-Tools > Windwos Firewall
+        private void windowsFirewallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("control.exe", "FIREWALL.CPL");
+
         }
         #endregion
         /*
@@ -514,8 +623,14 @@ namespace ToyBox
             InfoForm.Focus();
         }
 
+
+
+
+
+
+
         #endregion
 
-       
+        
     }
 }

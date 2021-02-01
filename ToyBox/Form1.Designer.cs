@@ -62,12 +62,13 @@
             this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diensteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datenträgerverwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gruppenrichtlienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lokalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.domäneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.netzwerkeinstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regeditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemsteuerunglegacyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mailKontenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gruppenrichtlienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lokalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softwareDownloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.advancedIPScannerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +79,13 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.domäneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.domainVerwaltungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activeDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activeDirectoryStandorteUndDiensteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activeDirectoryVerwaltungcenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDSIEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsFirewallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -268,13 +275,15 @@
             // 
             this.systemToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.computerverwaltungToolStripMenuItem,
+            this.datenträgerverwaltungToolStripMenuItem,
             this.diensteSteuerungToolStripMenuItem,
             this.diensteToolStripMenuItem,
-            this.datenträgerverwaltungToolStripMenuItem,
+            this.domainVerwaltungToolStripMenuItem,
             this.gruppenrichtlienToolStripMenuItem,
             this.netzwerkeinstellungenToolStripMenuItem,
             this.regeditToolStripMenuItem,
-            this.systemsteuerunglegacyToolStripMenuItem});
+            this.systemsteuerunglegacyToolStripMenuItem,
+            this.windowsFirewallToolStripMenuItem});
             this.systemToolsToolStripMenuItem.Name = "systemToolsToolStripMenuItem";
             this.systemToolsToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.systemToolsToolStripMenuItem.Text = "System-Tools";
@@ -348,6 +357,29 @@
             this.datenträgerverwaltungToolStripMenuItem.Text = "Datenträgerverwaltung";
             this.datenträgerverwaltungToolStripMenuItem.Click += new System.EventHandler(this.datenträgerverwaltungToolStripMenuItem_Click);
             // 
+            // gruppenrichtlienToolStripMenuItem
+            // 
+            this.gruppenrichtlienToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lokalToolStripMenuItem,
+            this.domäneToolStripMenuItem});
+            this.gruppenrichtlienToolStripMenuItem.Name = "gruppenrichtlienToolStripMenuItem";
+            this.gruppenrichtlienToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.gruppenrichtlienToolStripMenuItem.Text = "Sicherheitsrichtlinien";
+            // 
+            // lokalToolStripMenuItem
+            // 
+            this.lokalToolStripMenuItem.Name = "lokalToolStripMenuItem";
+            this.lokalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lokalToolStripMenuItem.Text = "Lokal";
+            this.lokalToolStripMenuItem.Click += new System.EventHandler(this.lokalToolStripMenuItem_Click);
+            // 
+            // domäneToolStripMenuItem
+            // 
+            this.domäneToolStripMenuItem.Name = "domäneToolStripMenuItem";
+            this.domäneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.domäneToolStripMenuItem.Text = "Domäne";
+            this.domäneToolStripMenuItem.Click += new System.EventHandler(this.domäneToolStripMenuItem_Click);
+            // 
             // netzwerkeinstellungenToolStripMenuItem
             // 
             this.netzwerkeinstellungenToolStripMenuItem.Name = "netzwerkeinstellungenToolStripMenuItem";
@@ -379,22 +411,6 @@
             this.mailKontenToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.mailKontenToolStripMenuItem.Text = "Mail-Konten";
             this.mailKontenToolStripMenuItem.Click += new System.EventHandler(this.mailKontenToolStripMenuItem_Click);
-            // 
-            // gruppenrichtlienToolStripMenuItem
-            // 
-            this.gruppenrichtlienToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lokalToolStripMenuItem,
-            this.domäneToolStripMenuItem});
-            this.gruppenrichtlienToolStripMenuItem.Name = "gruppenrichtlienToolStripMenuItem";
-            this.gruppenrichtlienToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.gruppenrichtlienToolStripMenuItem.Text = "Sicherheitsrichtlinien";
-            // 
-            // lokalToolStripMenuItem
-            // 
-            this.lokalToolStripMenuItem.Name = "lokalToolStripMenuItem";
-            this.lokalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lokalToolStripMenuItem.Text = "Lokal";
-            this.lokalToolStripMenuItem.Click += new System.EventHandler(this.lokalToolStripMenuItem_Click);
             // 
             // softwareDownloadToolStripMenuItem
             // 
@@ -472,12 +488,59 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // domäneToolStripMenuItem
+            // domainVerwaltungToolStripMenuItem
             // 
-            this.domäneToolStripMenuItem.Name = "domäneToolStripMenuItem";
-            this.domäneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.domäneToolStripMenuItem.Text = "Domäne";
-            this.domäneToolStripMenuItem.Click += new System.EventHandler(this.domäneToolStripMenuItem_Click);
+            this.domainVerwaltungToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.activeDirectoryToolStripMenuItem,
+            this.activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem,
+            this.activeDirectoryStandorteUndDiensteToolStripMenuItem,
+            this.activeDirectoryVerwaltungcenterToolStripMenuItem,
+            this.aDSIEditorToolStripMenuItem});
+            this.domainVerwaltungToolStripMenuItem.Name = "domainVerwaltungToolStripMenuItem";
+            this.domainVerwaltungToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.domainVerwaltungToolStripMenuItem.Text = "Domain-Verwaltung";
+            // 
+            // activeDirectoryToolStripMenuItem
+            // 
+            this.activeDirectoryToolStripMenuItem.Name = "activeDirectoryToolStripMenuItem";
+            this.activeDirectoryToolStripMenuItem.Size = new System.Drawing.Size(352, 22);
+            this.activeDirectoryToolStripMenuItem.Text = "Active Directory-Benutzer und Computer";
+            this.activeDirectoryToolStripMenuItem.Click += new System.EventHandler(this.activeDirectoryToolStripMenuItem_Click);
+            // 
+            // activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem
+            // 
+            this.activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem.Name = "activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem";
+            this.activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem.Size = new System.Drawing.Size(352, 22);
+            this.activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem.Text = "Active Directory-Domänen und Vertreuensstellungen";
+            this.activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem.Click += new System.EventHandler(this.activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem_Click);
+            // 
+            // activeDirectoryStandorteUndDiensteToolStripMenuItem
+            // 
+            this.activeDirectoryStandorteUndDiensteToolStripMenuItem.Name = "activeDirectoryStandorteUndDiensteToolStripMenuItem";
+            this.activeDirectoryStandorteUndDiensteToolStripMenuItem.Size = new System.Drawing.Size(352, 22);
+            this.activeDirectoryStandorteUndDiensteToolStripMenuItem.Text = "Active Directory-Standorte und Dienste";
+            this.activeDirectoryStandorteUndDiensteToolStripMenuItem.Click += new System.EventHandler(this.activeDirectoryStandorteUndDiensteToolStripMenuItem_Click);
+            // 
+            // activeDirectoryVerwaltungcenterToolStripMenuItem
+            // 
+            this.activeDirectoryVerwaltungcenterToolStripMenuItem.Name = "activeDirectoryVerwaltungcenterToolStripMenuItem";
+            this.activeDirectoryVerwaltungcenterToolStripMenuItem.Size = new System.Drawing.Size(352, 22);
+            this.activeDirectoryVerwaltungcenterToolStripMenuItem.Text = "Active Directory-Verwaltungcenter";
+            this.activeDirectoryVerwaltungcenterToolStripMenuItem.Click += new System.EventHandler(this.activeDirectoryVerwaltungcenterToolStripMenuItem_Click);
+            // 
+            // aDSIEditorToolStripMenuItem
+            // 
+            this.aDSIEditorToolStripMenuItem.Name = "aDSIEditorToolStripMenuItem";
+            this.aDSIEditorToolStripMenuItem.Size = new System.Drawing.Size(352, 22);
+            this.aDSIEditorToolStripMenuItem.Text = "ADSI Editor";
+            this.aDSIEditorToolStripMenuItem.Click += new System.EventHandler(this.aDSIEditorToolStripMenuItem_Click);
+            // 
+            // windowsFirewallToolStripMenuItem
+            // 
+            this.windowsFirewallToolStripMenuItem.Name = "windowsFirewallToolStripMenuItem";
+            this.windowsFirewallToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.windowsFirewallToolStripMenuItem.Text = "Windows Firewall";
+            this.windowsFirewallToolStripMenuItem.Click += new System.EventHandler(this.windowsFirewallToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -549,6 +612,13 @@
         private System.Windows.Forms.ToolStripMenuItem gruppenrichtlienToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lokalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem domäneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem domainVerwaltungToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activeDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activeDirectoryStandorteUndDiensteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activeDirectoryVerwaltungcenterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aDSIEditorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem windowsFirewallToolStripMenuItem;
     }
 }
 
