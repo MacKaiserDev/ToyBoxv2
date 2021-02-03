@@ -7,8 +7,8 @@
     <ProjectGuid>{7CE7F920-9B87-401B-B5DC-92BC30F49127}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ToyBox</RootNamespace>
-    <AssemblyName>ToyBox._net.4.5</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AssemblyName>ToyBox._net.3.5</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
