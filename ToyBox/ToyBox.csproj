@@ -118,7 +118,6 @@
     <Compile Include="CMD_Tools_slmgr_EnterKey.Designer.cs">
       <DependentUpon>CMD_Tools_slmgr_EnterKey.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database\Database_Config.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +188,9 @@
     <Content Include="Images\ico16826.ico" />
     <Content Include="Quellen\CPL-Quellen Windows.txt" />
     <Content Include="Quellen\Wichtige Exe Datien.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
