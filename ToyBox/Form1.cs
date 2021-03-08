@@ -223,8 +223,10 @@ namespace ToyBox
         #region CMD-Tools > Lokale Path Variable erneuern //runas
         private void fixEnviromentalVariablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(@"Anpassungen an der Registry im Bereich HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment erfordern Administrator Rechte.\r\n ToyBox daher als Administrator starten.");
             try
             {
+                
                 string sKey = @"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment";
                 string sPath = @"C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;";
                 //Setzt den Default Path neu
@@ -233,7 +235,7 @@ namespace ToyBox
             }
             catch
             {
-                MessageBox.Show("Fehler beim Setzten der lokalen Path Variable Ursache ungekannt.");
+                MessageBox.Show("Fehler beim Setzten der lokalen Path Variable. Ursache ungekannt.");
             }
 
         }
@@ -445,6 +447,29 @@ namespace ToyBox
         }
         #endregion
 
+        #region System-Tools > Domain-Verwaltung > NetDom Query FSMO
+
+        private void netDomQueryFSMOToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                try
+                {
+                    CProcessStart.PStart("cmd.exe", "/k", "netdom query fsmo", true);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("ADSI Editor nicht installiert oder kann nicht aufgerufen werden.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Dieser Rechner ist kein Domaincontroller");
+            }
+        }
+        #endregion
+
         #region System-Tools > Sicherheitsrichtlinien > Lokal
         private void lokalToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -629,8 +654,9 @@ namespace ToyBox
 
 
 
+
         #endregion
 
-        
+
     }
 }

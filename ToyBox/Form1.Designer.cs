@@ -86,6 +86,7 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.netDomQueryFSMOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -365,7 +366,8 @@
             this.activeDirectoryDomänenUndVertreuensstellungenToolStripMenuItem,
             this.activeDirectoryStandorteUndDiensteToolStripMenuItem,
             this.activeDirectoryVerwaltungcenterToolStripMenuItem,
-            this.aDSIEditorToolStripMenuItem});
+            this.aDSIEditorToolStripMenuItem,
+            this.netDomQueryFSMOToolStripMenuItem1});
             this.domainVerwaltungToolStripMenuItem.Name = "domainVerwaltungToolStripMenuItem";
             this.domainVerwaltungToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.domainVerwaltungToolStripMenuItem.Text = "Domain-Verwaltung";
@@ -543,6 +545,13 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // netDomQueryFSMOToolStripMenuItem1
+            // 
+            this.netDomQueryFSMOToolStripMenuItem1.Name = "netDomQueryFSMOToolStripMenuItem1";
+            this.netDomQueryFSMOToolStripMenuItem1.Size = new System.Drawing.Size(352, 22);
+            this.netDomQueryFSMOToolStripMenuItem1.Text = "NetDom Query FSMO";
+            this.netDomQueryFSMOToolStripMenuItem1.Click += new System.EventHandler(this.netDomQueryFSMOToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,6 +629,7 @@
         private System.Windows.Forms.ToolStripMenuItem activeDirectoryVerwaltungcenterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aDSIEditorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem windowsFirewallToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem netDomQueryFSMOToolStripMenuItem1;
     }
 }
 

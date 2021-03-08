@@ -1,0 +1,52 @@
+﻿//string user = searchResultView.SelectedItems[0].SubItems[1].Text;
+
+
+        string userName = "userl";
+        SecureString securePassword = new NetworkCredential("", "pass").SecurePassword;
+        PSCredential cred = new PSCredential(userName, securePassword);
+        WSManConnectionInfo connectionInfo = new WSManConnectionInfo(new Uri("http://server/powershell?serializationLevel=Full"), "http://schemas.microsoft.com/powershell/Microsoft.Exchange", cred);
+        connectionInfo.AuthenticationMechanism = AuthenticationMechanism.Kerberos;
+        using (Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo))
+        {
+            using (PowerShell powershell = PowerShell.Create())
+            {
+
+
+             
+               
+                string script2 = "Get-Mailbox user";
+
+                powershell.AddScript(script2);
+
+
+                runspace.Open();
+                powershell.Runspace = runspace;
+
+
+
+                Collection<PSObject> results = powershell.Invoke();
+                MessageBox.Show("REsults count" + results.Count.ToString());
+      
+                foreach (ErrorRecord err in powershell.Streams.Error)
+                {
+                    MessageBox.Show("Error");
+                    MessageBox.Show(err.ToString());
+                }
+               
+                MessageBox.Show("Results string" + results.ToString());
+
+                foreach (PSObject result in results)
+                {
+                    
+
+                    MessageBox.Show("Loop results:  " + result.ToString());
+                } 
+
+
+
+
+            }
+        }
+
+
+       // MessageBox.Show("Mail box statestik for: " + user);
