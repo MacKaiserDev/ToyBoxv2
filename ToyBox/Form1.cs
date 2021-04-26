@@ -519,6 +519,16 @@ namespace ToyBox
 
         }
         #endregion
+
+
+        #region System-Tools > Windwos Update
+        private void windowsUpdateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //control /name Microsoft.WindowsUpdate
+            System.Diagnostics.Process.Start("control", "/name Microsoft.WindowsUpdate");
+
+        }
+        #endregion
         /*
         --------------------------------------------------------------------------
         Menüpunkt Software Downloads
@@ -655,8 +665,9 @@ namespace ToyBox
 
 
 
+
         #endregion
 
-
+       
     }
 }

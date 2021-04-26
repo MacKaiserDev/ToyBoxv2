@@ -68,6 +68,7 @@
             this.activeDirectoryStandorteUndDiensteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activeDirectoryVerwaltungcenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDSIEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.netDomQueryFSMOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gruppenrichtlienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lokalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.domäneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,7 +87,7 @@
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.netDomQueryFSMOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -285,7 +286,8 @@
             this.netzwerkeinstellungenToolStripMenuItem,
             this.regeditToolStripMenuItem,
             this.systemsteuerunglegacyToolStripMenuItem,
-            this.windowsFirewallToolStripMenuItem});
+            this.windowsFirewallToolStripMenuItem,
+            this.windowsUpdateToolStripMenuItem});
             this.systemToolsToolStripMenuItem.Name = "systemToolsToolStripMenuItem";
             this.systemToolsToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
             this.systemToolsToolStripMenuItem.Text = "System-Tools";
@@ -406,6 +408,13 @@
             this.aDSIEditorToolStripMenuItem.Size = new System.Drawing.Size(352, 22);
             this.aDSIEditorToolStripMenuItem.Text = "ADSI Editor";
             this.aDSIEditorToolStripMenuItem.Click += new System.EventHandler(this.aDSIEditorToolStripMenuItem_Click);
+            // 
+            // netDomQueryFSMOToolStripMenuItem1
+            // 
+            this.netDomQueryFSMOToolStripMenuItem1.Name = "netDomQueryFSMOToolStripMenuItem1";
+            this.netDomQueryFSMOToolStripMenuItem1.Size = new System.Drawing.Size(352, 22);
+            this.netDomQueryFSMOToolStripMenuItem1.Text = "NetDom Query FSMO";
+            this.netDomQueryFSMOToolStripMenuItem1.Click += new System.EventHandler(this.netDomQueryFSMOToolStripMenuItem1_Click);
             // 
             // gruppenrichtlienToolStripMenuItem
             // 
@@ -545,12 +554,12 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // netDomQueryFSMOToolStripMenuItem1
+            // windowsUpdateToolStripMenuItem
             // 
-            this.netDomQueryFSMOToolStripMenuItem1.Name = "netDomQueryFSMOToolStripMenuItem1";
-            this.netDomQueryFSMOToolStripMenuItem1.Size = new System.Drawing.Size(352, 22);
-            this.netDomQueryFSMOToolStripMenuItem1.Text = "NetDom Query FSMO";
-            this.netDomQueryFSMOToolStripMenuItem1.Click += new System.EventHandler(this.netDomQueryFSMOToolStripMenuItem1_Click);
+            this.windowsUpdateToolStripMenuItem.Name = "windowsUpdateToolStripMenuItem";
+            this.windowsUpdateToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.windowsUpdateToolStripMenuItem.Text = "Windows Update";
+            this.windowsUpdateToolStripMenuItem.Click += new System.EventHandler(this.windowsUpdateToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -630,6 +639,7 @@
         private System.Windows.Forms.ToolStripMenuItem aDSIEditorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem windowsFirewallToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem netDomQueryFSMOToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem windowsUpdateToolStripMenuItem;
     }
 }
 
