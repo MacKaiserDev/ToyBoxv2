@@ -24,6 +24,8 @@ namespace ToyBox
         {
             InitializeComponent();
             
+            //Hält Anwendung im Vorderung
+            this.TopMost = true;
         }
 
         /*
