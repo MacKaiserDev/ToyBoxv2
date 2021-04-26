@@ -88,6 +88,7 @@
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.windowsUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemneustartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +117,7 @@
             this.iPConfigToolStripMenuItem,
             this.fixEnviromentalVariablesToolStripMenuItem,
             this.pingToolStripMenuItem,
+            this.systemneustartToolStripMenuItem,
             this.whoamiToolStripMenuItem,
             this.windowsAktivierungSlmgrToolStripMenuItem,
             this.tracertToolStripMenuItem});
@@ -561,6 +563,13 @@
             this.windowsUpdateToolStripMenuItem.Text = "Windows Update";
             this.windowsUpdateToolStripMenuItem.Click += new System.EventHandler(this.windowsUpdateToolStripMenuItem_Click);
             // 
+            // systemneustartToolStripMenuItem
+            // 
+            this.systemneustartToolStripMenuItem.Name = "systemneustartToolStripMenuItem";
+            this.systemneustartToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.systemneustartToolStripMenuItem.Text = "Systemneustart";
+            this.systemneustartToolStripMenuItem.Click += new System.EventHandler(this.systemneustartToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -640,6 +649,7 @@
         private System.Windows.Forms.ToolStripMenuItem windowsFirewallToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem netDomQueryFSMOToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem windowsUpdateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem systemneustartToolStripMenuItem;
     }
 }
 

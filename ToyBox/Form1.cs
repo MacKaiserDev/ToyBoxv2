@@ -220,6 +220,22 @@ namespace ToyBox
         }
         #endregion
 
+        #region CMD-Tools > Systemneustart
+        private void systemneustartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CProcessStart.PStart("cmd.exe", "/k", "shutdown -r /t 0", true);
+            }
+            catch
+            {
+                MessageBox.Show("Fehler");
+            }
+
+        }
+
+        #endregion
+
         #region CMD-Tools > Lokale Path Variable erneuern //runas
         private void fixEnviromentalVariablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -524,7 +540,6 @@ namespace ToyBox
         #region System-Tools > Windwos Update
         private void windowsUpdateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //control /name Microsoft.WindowsUpdate
             System.Diagnostics.Process.Start("control", "/name Microsoft.WindowsUpdate");
 
         }
@@ -666,8 +681,9 @@ namespace ToyBox
 
 
 
+
         #endregion
 
-       
+   
     }
 }
