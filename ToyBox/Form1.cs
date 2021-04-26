@@ -488,6 +488,30 @@ namespace ToyBox
         }
         #endregion
 
+        #region System-Tools > Domain-Verwaltung > DCDIAG
+        private void dCDIAGToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            if (Win32ServiceTools.GetServiceInstallVerification("NTDS") == true)
+            {
+                try
+                {
+                    CProcessStart.PStart("cmd.exe", "/k", "scdiag", true);
+                }
+                catch
+                {
+                    MessageBox.Show("Fehler");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Dieser Rechner ist kein Domaincontroller");
+            }
+
+           
+        }
+        #endregion
+
         #region System-Tools > Sicherheitsrichtlinien > Lokal
         private void lokalToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -702,8 +726,9 @@ namespace ToyBox
 
 
 
+
         #endregion
 
-       
+      
     }
 }

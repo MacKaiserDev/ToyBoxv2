@@ -90,6 +90,7 @@
             this.windowsUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemneustartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sMTPToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dCDIAGToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -372,6 +373,7 @@
             this.activeDirectoryStandorteUndDiensteToolStripMenuItem,
             this.activeDirectoryVerwaltungcenterToolStripMenuItem,
             this.aDSIEditorToolStripMenuItem,
+            this.dCDIAGToolStripMenuItem1,
             this.netDomQueryFSMOToolStripMenuItem1});
             this.domainVerwaltungToolStripMenuItem.Name = "domainVerwaltungToolStripMenuItem";
             this.domainVerwaltungToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
@@ -579,6 +581,13 @@
             this.sMTPToolToolStripMenuItem.Text = "SMTP-Tool";
             this.sMTPToolToolStripMenuItem.Click += new System.EventHandler(this.sMTPToolToolStripMenuItem_Click);
             // 
+            // dCDIAGToolStripMenuItem1
+            // 
+            this.dCDIAGToolStripMenuItem1.Name = "dCDIAGToolStripMenuItem1";
+            this.dCDIAGToolStripMenuItem1.Size = new System.Drawing.Size(352, 22);
+            this.dCDIAGToolStripMenuItem1.Text = "DCDIAG";
+            this.dCDIAGToolStripMenuItem1.Click += new System.EventHandler(this.dCDIAGToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,6 +669,7 @@
         private System.Windows.Forms.ToolStripMenuItem windowsUpdateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem systemneustartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sMTPToolToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dCDIAGToolStripMenuItem1;
     }
 }
 
