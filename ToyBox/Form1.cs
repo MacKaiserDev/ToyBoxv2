@@ -609,6 +609,23 @@ namespace ToyBox
         }
         #endregion
 
+        #region Software-Download > SMTP-Tool
+        private void sMTPToolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Liest den Downloads Ordner des aktuellen Users aus und speichert den Download von Teamviewer an dieser Stelle. 
+            string path = Environment.GetEnvironmentVariable("USERPROFILE") + @"\" + "Downloads";
+
+            string Zieldatei_SMTPTool = "SMTPTool.zip";
+            string Zielpfad = path + @"\" + Zieldatei_SMTPTool;
+
+            WebClient wb = new WebClient();
+            wb.DownloadFileAsync(new System.Uri("http://itskk.de/Upload/SMTPTool.zip"), Zielpfad);
+            //Process.Start(path);
+
+            MessageBox.Show("SMTPTool.zip wird heruntergeladen. Die Datei wurde unter: " + Zielpfad + " abgelegt. ");
+        }
+        #endregion
+
         #region Software-Tools > Teamviewer QS
         private void teamviewerQSToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -682,8 +699,9 @@ namespace ToyBox
 
 
 
+
         #endregion
 
-   
+       
     }
 }

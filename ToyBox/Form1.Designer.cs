@@ -89,6 +89,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.windowsUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemneustartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sMTPToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -486,6 +487,7 @@
             this.advancedIPScannerToolStripMenuItem,
             this.chromeToolStripMenuItem,
             this.firefoxToolStripMenuItem,
+            this.sMTPToolToolStripMenuItem,
             this.teamviewerQSToolStripMenuItem,
             this.teamviewerHostToolStripMenuItem,
             this.treeSizeFreeToolStripMenuItem});
@@ -570,6 +572,13 @@
             this.systemneustartToolStripMenuItem.Text = "Systemneustart";
             this.systemneustartToolStripMenuItem.Click += new System.EventHandler(this.systemneustartToolStripMenuItem_Click);
             // 
+            // sMTPToolToolStripMenuItem
+            // 
+            this.sMTPToolToolStripMenuItem.Name = "sMTPToolToolStripMenuItem";
+            this.sMTPToolToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.sMTPToolToolStripMenuItem.Text = "SMTP-Tool";
+            this.sMTPToolToolStripMenuItem.Click += new System.EventHandler(this.sMTPToolToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -650,6 +659,7 @@
         private System.Windows.Forms.ToolStripMenuItem netDomQueryFSMOToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem windowsUpdateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem systemneustartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sMTPToolToolStripMenuItem;
     }
 }
 
