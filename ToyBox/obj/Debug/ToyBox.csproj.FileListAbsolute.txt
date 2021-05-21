@@ -7,8 +7,8 @@ C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Debug\ToyBox.Info.resources
 C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Debug\ToyBox.CMD_Tools_slmgr_EnterKey.resources
 C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Debug\ToyBox.CMD_Tools_Ping.resources
 C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Debug\ToyBox.CMD_Tools_Tracert.resources
-C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Debug\ToyBox._net.3.5.exe.config
-C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Debug\ToyBox._net.3.5.exe
-C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Debug\ToyBox._net.3.5.pdb
-C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Debug\ToyBox._net.3.5.exe
-C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Debug\ToyBox._net.3.5.pdb
+C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Debug\ToyBox._net.4.7.exe.config
+C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Debug\ToyBox._net.4.7.exe
+C:\Users\stefa\source\repos\ToyBox\ToyBox\bin\Debug\ToyBox._net.4.7.pdb
+C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Debug\ToyBox._net.4.7.exe
+C:\Users\stefa\source\repos\ToyBox\ToyBox\obj\Debug\ToyBox._net.4.7.pdb
